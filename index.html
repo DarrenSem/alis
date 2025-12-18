@@ -3,8 +3,11 @@
     <title>ALIS.js - link to add as Favorite.html</title>
   </head>
   <body>
-    <p>long-press "Copy link address" then paste into a new Favorite/Bookmark:<br />
-      <a href='javascript:var n = /Neutral|Unsure/; document.querySelectorAll("input[type=\"radio\"]").forEach( r => r.parentElement.innerText.match(n) && r.click() )'>ALIS</a>
+    <p>
+      See <a href="https://darrensem.github.io/alis/">https://darrensem.github.io/alis/</a> for latest.
+    </p>
+    <p>long-press this link, "Copy link address", then paste clipboard into a new Favorite/Bookmark:<br />
+      <a href='javascript:void function(){"use strict";const a="innerText",b="textContent",c=console,d=document,e=d.querySelectorAll.bind(document),f=(a="rank",b="div",c="class~=")=>b+"["+c+"\""+a+"\"]",g=a=>a.parentElement,h=a=>a.length,i=(a,b)=>a?.match(b),j=a=>a.at(-1),k=setTimeout,l=a=>a.click(),m=(a,...b)=>a.scrollIntoView(...b),n=(c,d)=>{const e=[];if(c.forEach(c=>{const d=g(c),f=d[a],h=d[b];e.push(c)}),h(e)){const a=j(e),b=g(a),c={behavior:"smooth",block:"end"};k(m,99,b,c),k(m,900,g(d),c)}return e},o=()=>{const c=/^(Neutral|Unsure|Neither (like|agree) nor (dislike|disagree)|About Average|Somewhat Important|3)$/,d=e(f("radio","input","type="));d.forEach(d=>{const e=i(d.getAttribute("aria-label"),/(\d) stars?/)?.[1],f=g(d),h=e??f[a],j=i(h,c)??("3"==d.value&&[" Agree"].includes(f[b]));j&&l(d)})},p=b=>{const c=[],d=/Next|Get Results/,g=e(f("button","button"));return g.forEach(b=>{const e=b[a],f=b.classList,g=i(e,d);g&&!f.contains("js-disabled")&&c.push(b)}),h(c)&&!b&&k(l,44,j(c)),c};c.clear(),c.log((()=>{const b=e(f()+">"+f("handle")),c={h:b},d=h(b)?[...e(f()+">"+f("value"))].map(b=>b[a]):[],g="1"==d[0]&&"1"==j(d);return g?c.r=n(b,p(!0)[0]):(o(),c.r=p()),c})())}();'>ALIS.js</a>
       </p>
     </body>
 </html>
